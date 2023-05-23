@@ -1,10 +1,16 @@
 public class Main {
     public static void main(String[] args) {
         BST<Integer, String> bst = new BST<>();
-        bst.put(1, "one apple");
-        bst.put(2, "two apples");
-        bst.put(3, "three apples");
-
+        bst.put(-1, "one ");
+        bst.put(1, "two ");
+        bst.put(2, "three ");
+        bst.put(3, "four");
+        bst.put(4, "five");
+        bst.put(-2, "six");
+        bst.put(5, "seven");
+        bst.put(6, "eight");
+        bst.put(7, "nine");
+        System.out.println(bst.BSTHeight());
         System.out.println("BST size: " + bst.size());
 
         // Print all key-value pairs using iterator

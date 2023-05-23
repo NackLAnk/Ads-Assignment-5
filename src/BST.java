@@ -189,4 +189,13 @@ public class BST<K extends Comparable<K>, V extends Comparable<V>> implements It
         }
         return 1 + size(node.left) + size(node.right);
     }
+    public int BSTHeight() {
+        return BSTHeight(root);
+    }
+    private int BSTHeight(Node node) {
+        if(node == null) {
+            return 0;
+        }
+         return 1 + BSTHeight(node.right);
+    }
 }
