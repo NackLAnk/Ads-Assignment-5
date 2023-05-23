@@ -189,13 +189,20 @@ public class BST<K extends Comparable<K>, V extends Comparable<V>> implements It
         }
         return 1 + size(node.left) + size(node.right);
     }
+
     public int BSTHeight() {
         return BSTHeight(root);
     }
+
     private int BSTHeight(Node node) {
-        if(node == null) {
+        if (node == null) {
             return 0;
         }
-         return 1 + BSTHeight(node.right);
+
+        int leftMaxLength = BSTHeight(node.left); // Максимальная длина левого поддерева
+        int rightMaxLength = BSTHeight(node.right); // Максимальная длина правого поддерева
+
+        // Возвращаем максимальную длину между левым и правым поддеревом плюс 1
+        return Math.max(leftMaxLength, rightMaxLength) + 1;
     }
 }

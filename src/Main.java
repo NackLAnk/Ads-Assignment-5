@@ -10,7 +10,7 @@ public class Main {
         bst.put(5, "seven");
         bst.put(6, "eight");
         bst.put(7, "nine");
-        System.out.println(bst.BSTHeight());
+        System.out.println("BSTHeight: " + bst.BSTHeight());
         System.out.println("BST size: " + bst.size());
 
         // Print all key-value pairs using iterator
